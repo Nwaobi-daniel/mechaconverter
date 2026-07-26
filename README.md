@@ -1,43 +1,44 @@
-# Universal Converter
+# Mechaconverter
 
 ## Project Overview
-Universal Converter is a beginner-friendly single-page app built with HTML5, CSS3, and vanilla JavaScript. It converts common units locally and uses a live API for currency conversions.
+Mechaconverter is a single-page converter app built with HTML5, CSS3, and vanilla JavaScript. It converts common units locally and uses fixed currency rates for NGN, USD, EUR, and GBP.
 
 ## Features
 - Convert length, weight, time, area, volume, and temperature.
-- Live currency conversion with Frankfurter API.
-- Category-based unit selection with automatic dropdown updates.
-- Swap button to exchange source and target units.
-- Responsive layout for desktop and mobile.
-- Simple validation and friendly error messages.
+- Currency conversion using fixed currency rates relative to NGN.
+- Category dropdown updates unit options automatically.
+- Swap button to exchange the source and target units.
+- Responsive dark theme layout for desktop and mobile.
+- Input formatting with grouped thousands and decimal support.
+- Validation and clear error messages for invalid input.
 
 ## Technologies Used
 - HTML5
 - CSS3
 - Vanilla JavaScript
-- Frankfurter API for currency exchange rates
 
 ## How It Works
-1. Select a conversion category.
-2. Enter an amount.
+1. Pick a conversion category.
+2. Enter a number in the amount field.
 3. Choose the source and target units.
 4. Click `Convert`.
-5. The app uses JavaScript for local unit conversions.
-6. For currencies, it fetches a live rate from the API.
+5. Local conversions are calculated directly in JavaScript.
+6. Currency conversions use fixed NGN exchange rates hardcoded in the app.
 
-## API Used
-- **Frankfurter API**
-- Endpoint: `https://api.frankfurter.app/latest`
-- No API key required.
+## Currency Rates Used
+- `1 USD = ₦1,362.09`
+- `1 EUR = ₦1,556.42`
+- `1 GBP = ₦1,818.78`
+- `1 NGN = 1 NGN`
 
 ## Project Structure
-- `index.html` — app structure and form controls.
-- `style.css` — visual styling, responsive layout, and minimal modern theme.
-- `script.js` — conversion logic, event handling, and API fetch.
+- `index.html` — page markup and converter form.
+- `style.css` — dark themed styling and responsive layout.
+- `script.js` — conversion logic, input formatting, and validation.
 
 ## Possible Improvements
-- Add more currency options dynamically.
-- Support conversion history or saved favorites.
-- Add dark mode and custom themes.
-- Improve error messages with specific API feedback.
-- Add keyboard shortcuts for faster conversion.
+- Add more currencies and rates.
+- Include a conversion history panel.
+- Add more unit categories like pressure or energy.
+- Improve UX with animations and keyboard shortcuts.
+- Add a clean mobile-only layout variant.
