@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universal Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero-card">
+      <div>
+        <p class="eyebrow">Mechaconverter</p>
+        <h1>Convert units and currencies in one place.</h1>
+        <p class="intro">A simple, responsive app that converts length, weight, time, area, volume, temperature, and live currency rates.</p>
+      </div>
+    </header>
+
+    <section class="converter-card" aria-labelledby="converter-title">
+      <div class="section-header">
+        <h2 id="converter-title">Choose a conversion</h2>
+        <p>Pick a category, enter an amount, and see the result instantly.</p>
+      </div>
+
+      <div class="form-grid">
+        <label for="category">Category</label>
+        <select id="category" aria-label="Conversion category"></select>
+
+        <label for="amount">Amount</label>
+        <input id="amount" type="text" inputmode="decimal" pattern="[0-9\s.]*" placeholder="Enter value" />
+
+        <label for="from-unit">From</label>
+        <select id="from-unit"></select>
+
+        <button id="swap-button" type="button" class="swap-button" aria-label="Swap units">↔ Swap</button>
+
+        <label for="to-unit">To</label>
+        <select id="to-unit"></select>
+      </div>
+
+      <div class="actions-row">
+        <button id="convert-button" type="button">Convert</button>
+        <span id="status" class="status-text" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <section class="result-card" aria-live="polite">
+      <p class="result-label">Result</p>
+      <div id="result">Enter values and convert to see your answer.</div>
+    </section>
+
+    <footer class="footer-card">
+      <p>Built by Daniel Nwaobi </p>
+      <p>Matriculation number: U2020/3035026</p>    
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
